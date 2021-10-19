@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Building Layouts</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="favourites_title">Favourites</string>
+
     <string name="paragraph">
         The following example shows the top app bar positioned at the same elevation as content.
         Upon scroll, it increases elevation and lets content scroll behind it. The following example
@@ -11,4 +13,7 @@
         positioned at the same elevation as content. Upon scroll, it increases elevation and lets
         content scroll behind it.
     </string>
+
+    <string name="item_name_ultraviolence">Ultraviolence</string>
+
 </resources>

@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
+import com.example.buildinglayouts.AlbumsAdapter
 import com.example.buildinglayouts.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -20,7 +22,6 @@ import com.google.android.material.snackbar.Snackbar
  */
 class AlbumsFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,23 +32,9 @@ class AlbumsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val fab: FloatingActionButton = view.findViewById(R.id.add_fab)
-        fab.setOnClickListener{
-            //Toast.makeText(requireContext(), "I am a toast", Toast.LENGTH_LONG).show()
-            Snackbar.make(view, "Internet not available", Snackbar.LENGTH_LONG)
-                .setAction("Retry", {
-                    Toast.makeText(requireContext(), "Internet is available", Toast.LENGTH_LONG).show()
 
-                })
-
-
-                .show()
-
-
-
-
-
-        }
+        val recyclerView: RecyclerView = view.findViewById(R.id.albums_recycler_view)
+        val albumsAdapter = AlbumsAdapter()
+        recyclerView.adapter = albumsAdapter
     }
-
 }
